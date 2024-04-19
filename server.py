@@ -1,56 +1,34 @@
 import socket
 from pyDes import *
-
-def encrypt_message(message, key):
-    desi = des(key, CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=PAD_PKCS5)
-    return desi.encrypt(message)
+import os
 
 def decrypt_message(ciphertext, key):
     desi = des(key, CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=PAD_PKCS5)
-    return desi.decrypt(ciphertext)
+    decrypted_message = desi.decrypt(ciphertext)
+    return decrypted_message
 
 def server_program():
-    s = socket. socket()
+    host = '127.0.0.1'  # IP adresa lokale
+    port = 5001  # Porti që serveri është i lidhur me te
 
-    print('Socket succesfully created')
-
-    port = 5001
-    s. bind(('', port))
-    print(f'socket binded to port{port}')
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((host, port))
     s.listen(5)
 
-    print( 'Socket is listening')
-    key = "DESCrypt"  # 8-byte key for DES
+    print('Serveri është i gatshëm të pranojë lidhje...')
 
     while True:
-        c, addr = s.accept()
-        print( 'Got connection from', addr)
-        message = encrypt_message("Thank you for connecting",key)
-        #print(message)
-        c.send(message)
-        c.close()
-    '''host = socket.gethostname()
-    port = 5001
+        conn, addr = s.accept()
+        print(f'U lidh klienti nga {addr}')
 
-    server_socket = socket.socket()
-    server_socket.bind((host, port))
-
-    server_socket.listen(5)
-    conn, address = server_socket.accept()
-    print("Connection from: " + str(address))
-
-    key = "DESCrypt"  # 8-byte key for DES
-
-    while True:
+        # Prano çelësin e dërguar nga klienti
+        key = conn.recv(8)
         data = conn.recv(1024)
-        if not data:
-            break
+        
         decrypted_data = decrypt_message(data, key)
-        print("Received from client: " + decrypted_data.decode())
-        message = input(' -> ')
-        encrypted_message = encrypt_message(message, key)
-        conn.send(encrypted_message)
-    conn.close()'''
+        print(f'Mesazhi i dekriptuar nga klienti: {decrypted_data.decode()}')
+        
+        conn.close()
 
 if __name__ == '__main__':
     server_program()
