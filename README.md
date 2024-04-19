@@ -4,7 +4,7 @@
 ##### Ky projekt eshte realizuar nga studente te Universitetit "Hasan Prishtina"- Fakulteti i Inxhinierise Elektrike dhe Kompjuterike, ne lenden "Siguria e te dhenave"- prof.Blerim Rexha dhe asc. Mergim Hoti.
 
 ### Pershkrimi i projektit: 
-##### Ne kete repository gjendet kodi ne gjuhen programuese Python per programimin e nje cifti te thjeshte klient/server te cilet komunikojne mes vete me mesazhe te enkriptuara permes DES algoritmit. Klienti dërgon mesazhe të enkriptuara dhe pranon përgjigje të dekriptuara nga serveri, demonstruar përdorimin e sigurisë në transmetim.
+##### Ne kete repository gjendet kodi ne gjuhen programuese Python per programimin e nje cifti te thjeshte klient/server te cilet komunikojne mes vete me mesazhe te enkriptuara permes DES algoritmit. Klienti dërgon mesazhe të enkriptuara dhe pranon përgjigje të dekriptuara nga serveri.
 
 ### Konfigurimet dhe kërkesat:
 ##### Klienti duhet të ketë instaluar libraritë e nevojshme në Python, siç janë socket dhe pyDes, dhe mund të lidhet me serverin duke përdorur adresën IP dhe portin e përcaktuar. Klienti dhe serveri duhet të përdorin të njëjtin çelës DES për enkriptim dhe dekriptim.
