@@ -6,7 +6,9 @@ def get_predefined_key():
     return b" \x31\x41\x61\x11\x21\x31\x41\x51"
 
 def decrypt_message(ciphertext, key):
+   # Krijo një objekt DES me çelësin dhe modalitetin ECB
     desi = des(key, ECB, pad=None, padmode=PAD_PKCS5)
+   # Dekripto ciphertext-in duke përdorur DES
     decrypted_message = desi.decrypt(ciphertext)
     return decrypted_message
 
@@ -19,16 +21,20 @@ def server_program():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((host, port))
     s.listen(5)
-
+    print("----------------------------------------------")
     print('Serveri është i gatshëm të pranojë lidhje...')
-
+   print("-----------------------------------------------")
     while True:
         conn, addr = s.accept()
+        print("--------------------------------------------------------")
         print(f'U lidh klienti nga {addr}')
+        print("--------------------------------------------------------")
 
         data = conn.recv(1024)
         decrypted_data = decrypt_message(data, key)
+        print("--------------------------------------------------------")
         print(f'Mesazhi i dekriptuar nga klienti: {decrypted_data.decode()}')
+        print("--------------------------------------------------------")
         
         conn.close()
 
