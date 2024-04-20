@@ -1,15 +1,20 @@
 import socket
 from pyDes import *
-import os
+
+def get_predefined_key():
+   
+    return b" \x31\x41\x61\x11\x21\x31\x41\x51"
 
 def decrypt_message(ciphertext, key):
-    desi = des(key, CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=PAD_PKCS5)
+    desi = des(key, ECB, pad=None, padmode=PAD_PKCS5)
     decrypted_message = desi.decrypt(ciphertext)
     return decrypted_message
 
 def server_program():
     host = '127.0.0.1'  # IP adresa lokale
     port = 5001  # Porti që serveri është i lidhur me te
+
+    key = get_predefined_key()
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((host, port))
@@ -21,10 +26,7 @@ def server_program():
         conn, addr = s.accept()
         print(f'U lidh klienti nga {addr}')
 
-        # Prano çelësin e dërguar nga klienti
-        key = conn.recv(8)
         data = conn.recv(1024)
-        
         decrypted_data = decrypt_message(data, key)
         print(f'Mesazhi i dekriptuar nga klienti: {decrypted_data.decode()}')
         
