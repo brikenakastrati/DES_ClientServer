@@ -13,7 +13,7 @@
 ##### - `client.py`: Kjo është skripta që ekzekuton klientin. Përdoruesi mund të jep një mesazh që dëshiron të dërgojë në server për të enkriptuar dhe pastaj ta dërgojë.
 
 
-## Si të përdorim këtë projekt
+## Si të përdorim këtë projekt:
 ##### Për të përdorur këtë projekt, duhet të keni Pythonin dhe libraritë e nevojshme të instaluar në mjedisin tuaj. Libraria pyDes është e nevojshme për të punuar me algoritmin DES në Python.
 
 ##### 1. Fillimisht, sigurohuni që keni instaluar Pythonin në sistemin tuaj.
@@ -21,11 +21,11 @@
 ##### 3. Ekzekutoni skriptën `server.py` për të startuar serverin.
 
 
-### Rezultatet e pritshme:
+## Rezultatet e pritshme:
 ##### Rezultati i pritshem nga  ky projekt eshte nje program i plote funkisonal ne gjuhen programuese Python i cili i lejon user-it te enkriptoj dhe dekriptoj mesazhe duke perdorur DES algoritmin.
 
 
-### Kontribues ne kete projekt jane:
+## Kontribues ne kete projekt jane:
 ##### -[Brikena Kastrati ](https://github.com/brikenakastrati)
 ##### -[Daris Dragusha ](https://github.com/darisdr)
 ##### -[Dea Limoni ](https://github.com/DeaLimoni)
