@@ -26,7 +26,7 @@
 
 
 ### Kontribues ne kete projekt jane:
-##### -[Brikena Kastrati 1](https://github.com/Brikena-Kastrati-1)
-##### -[Daris Dragusha 2](https://github.com/Daris-Dragusha-2)
-##### -[Dea Limoni 3](https://github.com/Dea-Limoni-3)
+##### -[Brikena Kastrati ](https://github.com/Brikena-Kastrati-1)
+##### -[Daris Dragusha ](https://github.com/Daris-Dragusha-2)
+##### -[Dea Limoni ](https://github.com/Dea-Limoni-3)
 
