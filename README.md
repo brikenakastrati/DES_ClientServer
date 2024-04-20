@@ -1,7 +1,5 @@
-# Perdorimi i DES per te mbeshtjellur Network Stream 
-###  Implementimi i nje cifti klient/server te thjeshte duke komunikuar ne kete menyre.
-
-##### Ky projekt eshte realizuar nga studente te Universitetit "Hasan Prishtina"- Fakulteti i Inxhinierise Elektrike dhe Kompjuterike, ne lenden "Siguria e te dhenave"- prof.Blerim Rexha dhe asc. Mergim Hoti.
+# DES_ClientServer
+##### Ky eshte nje projekt semestral i punuar nga studente te vitit te dyte te Universitetit "Hasan Prishtina"-Fakulteti i Inxhinieris Elektrike dhe Kompjuterike, ne Lenden "Data Security"-Prof.Blerim Rexha dhe Asc.Mergim Hoti.
 
 ### Pershkrimi i projektit: 
 ##### Ne kete repository gjendet kodi ne gjuhen programuese Python per programimin e nje cifti te thjeshte klient/server te cilet komunikojne mes vete me mesazhe te enkriptuara permes DES algoritmit. Klienti dërgon mesazhe të enkriptuara dhe pranon përgjigje të dekriptuara nga serveri.
@@ -14,3 +12,5 @@
 
 
 ##### Kontribues ne kete projekt jane: Brikena Kastrati, Daris Dragusha dhe Dea Limoni.
+# Perdorimi i DES per te mbeshtjellur Network Stream 
+###  Implementimi i nje cifti klient/server te thjeshte duke komunikuar ne kete menyre.
