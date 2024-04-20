@@ -1,6 +1,6 @@
 # Enkriptimi dhe Dekriptimi i Mesazheve në Python permes DES algoritmit
 
-##### Ky eshte nje projekt semestral i punuar nga studente te vitit te dyte te Universitetit "Hasan Prishtina"-Fakulteti i Inxhinieris Elektrike dhe Kompjuterike, ne Lenden "Data Security"-Prof.Blerim Rexha dhe Asc.Mergim Hoti.
+##### Ky eshte nje projekt i punuar nga studente te vitit te dyte te Universitetit "Hasan Prishtina"-Fakulteti i Inxhinieris Elektrike dhe Kompjuterike, ne Lenden "Data Security"-Prof.Blerim Rexha dhe Asc.Mergim Hoti.
 
 ## Pershkrimi i projektit: 
 ##### Ne kete repository gjendet kodi ne gjuhen programuese Python per programimin e nje cifti te thjeshte klient/server te cilet komunikojne mes vete me mesazhe te enkriptuara permes DES algoritmit. Klienti dërgon mesazhe të enkriptuara dhe pranon përgjigje të dekriptuara nga serveri.
