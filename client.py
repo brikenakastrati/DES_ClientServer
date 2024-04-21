@@ -10,6 +10,12 @@ def encrypt_message(message, key):
     desi = des(key, ECB, pad=None, padmode=PAD_PKCS5)
     encrypted_message = desi.encrypt(message)
     return encrypted_message
+def decrypt_message(ciphertext, key):
+   # Krijo një objekt DES me çelësin dhe modalitetin ECB
+    desi = des(key, ECB, pad=None, padmode=PAD_PKCS5)
+   # Dekripto ciphertext-in duke përdorur DES
+    decrypted_message = desi.decrypt(ciphertext)
+    return decrypted_message
 # Klienti
 def client_program():
     host = '127.0.0.1'  # IP adresa e serverit
@@ -26,9 +32,18 @@ def client_program():
         encrypted_message = encrypt_message(message, key)
         print("-----------------------------------------------------------------------------")
         print(f'Mesazhi është enkriptuar "{encrypted_message}" dhe është dërguar në server.')
-           print("---------------------------------------------------------------------------")
+        print("---------------------------------------------------------------------------")
         # Dërgo mesazhin e enkriptuar në server
         s.send(encrypted_message)
+        prompt = s.recv(1024)
+        decrypted_prompt = decrypt_message(prompt, key)
+        print(decrypted_prompt.decode())
 
+        answer = input("")
+        encrypted_answer = encrypt_message(answer,key)
+        s.send(encrypted_answer)
+
+        decrypted_data = decrypt_message(s.recv(1024),key)
+        print(decrypted_data.decode())
 if __name__ == '__main__':
     client_program()
