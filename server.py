@@ -3,27 +3,29 @@ from pyDes import *
 
 def get_predefined_key():
    
-    return b" \x31\x41\x61\x11\x21\x31\x41\x51"
+    return b"\x31\x41\x61\x11\x21\x31\x41\x51"
 
 def decrypt_message(ciphertext, key):
-   # Krijo një objekt DES me çelësin dhe modalitetin ECB
+  
     desi = des(key, ECB, pad=None, padmode=PAD_PKCS5)
-   # Dekripto ciphertext-in duke përdorur DES
+   # Dekripto ciphertext-in duke perdorur DES
     decrypted_message = desi.decrypt(ciphertext)
     return decrypted_message
 
 def server_program():
     host = '127.0.0.1'  # IP adresa lokale
-    port = 5001  # Porti që serveri është i lidhur me te
+    port = 5001  
 
     key = get_predefined_key()
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((host, port))
     s.listen(5)
-    print("----------------------------------------------")
+   
     print('Serveri është i gatshëm të pranojë lidhje...')
-   print("-----------------------------------------------")
+    
+
+  
     while True:
         conn, addr = s.accept()
         print("--------------------------------------------------------")
