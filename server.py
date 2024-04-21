@@ -54,7 +54,7 @@ def server_program():
         if decrypted_answer == 'p':
             conn.send(data)
         elif decrypted_answer == 'j':
-            conn.send(b"")
+            conn.send(encrypt_message("Ju nuk doni te shihni mesazhin e juaj",key))
         
         conn.close()
 
