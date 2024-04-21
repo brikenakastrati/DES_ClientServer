@@ -18,9 +18,9 @@
 
 ##### 1. Fillimisht, sigurohuni që keni instaluar Pythonin në sistemin tuaj.
 ##### 2.Instaloni libraritë e nevojshme duke përdorur pip. Libraritë që duhen instaluar janë 'pyDes'.
-##### 3.Kopjoni kodin e klientit në një skedar të quajtur 'client.py', dhe kodin e serverit në një skedar të quajtur 'server.py'.
+##### 3.Kopjoni kodin e klientit në një skedar të quajtur `client.py`, dhe kodin e serverit në një skedar të quajtur `server.py`.
 ##### 4.Ekzekutoni skriptën `server.py` duke shkruar ne terminal: python server.py
-##### 5.Pastaj, ekzekutoni 'client.py' në një terminal tjetër ose në një dritare të ndarë, duke shkruar: python client.py.
+##### 5.Pastaj, ekzekutoni `client.py` në një terminal tjetër ose në një dritare të ndarë, duke shkruar: python client.py.
 ##### 6.Ndiq instruksionet që i ofron programi.
 
 ## Rezultatet e pritshme nga ky projekt janë:
