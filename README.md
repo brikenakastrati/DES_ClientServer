@@ -17,12 +17,21 @@
 ##### Për të përdorur këtë projekt, duhet të keni Pythonin dhe libraritë e nevojshme të instaluar në mjedisin tuaj. Libraria pyDes është e nevojshme për të punuar me algoritmin DES në Python.
 
 ##### 1. Fillimisht, sigurohuni që keni instaluar Pythonin në sistemin tuaj.
-##### 2. Instaloni libraritë e nevojshme duke përdorur komandën `pip install -r requirements.txt`.
-##### 3. Ekzekutoni skriptën `server.py` për të startuar serverin.
+##### 2.Instaloni libraritë e nevojshme duke përdorur pip. Libraritë që duhen instaluar janë 'pyDes'.
+##### 3.Kopjoni kodin e klientit në një skedar të quajtur client.py, dhe kodin e serverit në një skedar të quajtur server.py.
+##### 4.Ekzekutoni skriptën `server.py` duke shkruar ne terminal: python server.py
+##### 5.Pastaj, ekzekutoni klientin në një terminal tjetër ose në një dritare të ndarë, duke shkruar: python client.py.
+##### 6.Ndiq instruksionet që i ofron programi.
 
+## Rezultatet e pritshme nga ky projekt janë:
 
-## Rezultatet e pritshme:
-##### Rezultati i pritshem nga  ky projekt eshte nje program i plote funkisonal ne gjuhen programuese Python i cili i lejon user-it te enkriptoj dhe dekriptoj mesazhe duke perdorur DES algoritmin.
+##### Klienti fillon dhe shkruan një mesazh të thjeshtë.
+##### Mesazhi i klientit enkriptohet përdorur çelësin e paracaktuar DES.
+##### Mesazhi i enkriptuar dërgohet në server.
+##### Serveri merr mesazhin e enkriptuar dhe e dekripton duke përdorur të njëjtin çelës.
+##### Serveri degon një prompt të enkriptuar tek klienti.
+##### Klienti dekripton prompten, merr inputin e userit, e enkripton dhe e kthen te serveri.
+##### Në bazë të përgjigjes së user-it serveri kthen prapa mesazhin e enkriptuar ose një mesazh default.
 
 
 ## Kontribues ne kete projekt jane:
